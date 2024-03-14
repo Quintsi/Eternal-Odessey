@@ -84,14 +84,12 @@
                 email: email,
                 },
             success: function(response) {
-                // Simulate success callback
+
                 console.log("Form submitted successfully.");
 
-                // On success, change the image src to the new image URL
                 var astronautImage = document.querySelector('img[alt="Astronaut"]');
                 astronautImage.style = "background-color: transparent;"
                 astronautImage.src = 'images/astronaut_thumbsup.png'; 
-                // You can also add any success message display or other UI updates here
             },
             error: function(xhr, status, error) {
                 // Handle error
