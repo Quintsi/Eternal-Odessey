@@ -75,13 +75,37 @@
                 return;
             }
 
+            $.ajax({
+            url: '#', 
+            type: 'GET', 
+            data: {
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                },
+            success: function(response) {
+                // Simulate success callback
+                console.log("Form submitted successfully.");
+
+                // On success, change the image src to the new image URL
+                var astronautImage = document.querySelector('img[alt="Astronaut"]');
+                astronautImage.style = "background-color: transparent;"
+                astronautImage.src = 'images/astronaut_thumbsup.png'; 
+                // You can also add any success message display or other UI updates here
+            },
+            error: function(xhr, status, error) {
+                // Handle error
+                console.error("An error occurred: " + error);
+            }
+            });
+
             // If all validations pass, you can submit the form
-            document.getElementById("signup").submit();
+            // document.getElementById("signup").submit();
         }
 
 
     </script>
-    <script async src="scripts/loadContent.js"></script>
+    <script defer src="scripts/loadContent.js"></script>
 </head>
 
 
@@ -217,25 +241,7 @@
 
     <!-- footer main content -->
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 All Rights Reserved</p>
-                <p>Created by team 5</p>
-        </div>
-
-        <!-- search form page => this form opens when the user clicks the search icon in the navbar -->
-
-        <div class="search-model">
-            <div class="d-flex align-items-center justify-content-center h-100">
-                <div class="search-close-switch">
-                    +
-                </div>
-                <form class="search-model-form">
-                    <input type="text" name="" id="search-input" placeholder="Search here">
-                </form>
-            </div>
-        </div>
-    </footer>
+    <footer id="footer"></footer>
 
     <!-- end of page content -->
 
