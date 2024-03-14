@@ -11,7 +11,7 @@ span, i, button, a {
 }
 
 body {
-  background: url("./images/background.png");
+  background: url("../images/background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
