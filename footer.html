@@ -22,19 +22,3 @@
     </div>
 </div>
 
-<script type="text/javascript">
-
-    $(document).ready(function(){
-        $("#search-switch").click(function(){
-            $(".search-model").toggleClass('active-search');
-        });
-        $(".search-close-switch").click(function(){
-            $(".search-model").toggleClass('active-search');
-        })
-    })
-    
-    document.getElementById('terms').addEventListener('click', function() {
-        var submitButton = document.getElementById('test');
-        submitButton.disabled = !this.checked;
-    });
-</script>
