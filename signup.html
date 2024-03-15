@@ -246,7 +246,7 @@
 
     <!-- javascript functionality for the search-model and search-close-swtich (JQuery) location of classes: footer -->
 
-    <script type="text/javascript">
+    <script type="text/javascript" >
 
         $(document).ready(function(){
             $("#search-switch").click(function(){
@@ -256,6 +256,7 @@
                 $(".search-model").toggleClass('active-search');
             })
         })
+        
         document.getElementById('terms').addEventListener('click', function() {
             var submitButton = document.getElementById('test');
             submitButton.disabled = !this.checked;
