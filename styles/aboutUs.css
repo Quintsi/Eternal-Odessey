@@ -72,8 +72,12 @@ body {
   cursor: pointer;
   text-align: center;
   background-color: rgba(108, 117, 125, 0.9019607843);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
+.search-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 10px 10px -5px #20153C;
+}
 .search-btn i {
   color: #fff;
   font-size: 1rem;
